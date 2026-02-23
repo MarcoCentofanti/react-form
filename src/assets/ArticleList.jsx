@@ -8,14 +8,27 @@ export default function ArticleList() {
     e.preventDefault()
     SetArticles([...articles, newArticle])
     SetNewArticle("")
+  }
 
+  const removeArticle = (index) => {
+    const trimmedArticleList = articles.filter((element, i) => {
+      return index !== i
+    })
+    SetArticles(trimmedArticleList)
   }
 
   return (
     <>
       <ul>
         {articles.map((singlearticle, index) => (
-          <li key={index}>{singlearticle}</li>
+          <li 
+          key={index}>
+            {singlearticle}
+            <button 
+              onClick={() => removeArticle(index)}>
+                X
+            </button>
+          </li>
         ))}
       </ul>
       <form onSubmit={addArtilce}>
