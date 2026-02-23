@@ -37,6 +37,7 @@ export default function ArticleList() {
       )
     })
     SetArticles(modifiedArticles)
+    SetModifiedArticle("")
   }
 
   return (
