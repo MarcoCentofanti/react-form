@@ -13,13 +13,16 @@ import { useState } from 'react'
 import './App.css'
 import ArticleList from './assets/ArticleList'
 
+
 function App() {
 
 
   return (
     <>
-      <h1>Articoli</h1>
-      <ArticleList/>
+      <section className='container'> 
+        <h1>Articoli</h1>
+        <ArticleList/>
+      </section>
     </>
   )
 }
