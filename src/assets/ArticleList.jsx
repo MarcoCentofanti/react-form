@@ -9,6 +9,7 @@ export default function ArticleList() {
   const addArticle = (e) => {
     e.preventDefault()
     SetArticles([...articles, newArticle])
+    SetIsModalOpen([...isModalOpen, false])
     SetNewArticle("")
   }
 
