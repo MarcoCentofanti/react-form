@@ -26,6 +26,7 @@ export default function ArticleList() {
         i === index? !element : element 
       )
     })
+    SetModifiedArticle(articles[index])
     SetIsModalOpen(modifyModal)
 }
 
@@ -47,11 +48,11 @@ export default function ArticleList() {
           <li className="mb-3"
           key={index}>
             {singlearticle}
-            <button 
+            <button className="ms-3"
               onClick={() => removeArticle(index)}>
                 X
             </button>
-            <button 
+            <button className="ms-1"
               onClick={() => modalVisibility(index)}>
                 modifica
             </button>
