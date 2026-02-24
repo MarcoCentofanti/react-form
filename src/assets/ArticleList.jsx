@@ -23,7 +23,7 @@ export default function ArticleList() {
   const modalVisibility = (index) => {
     const modifyModal = isModalOpen.map((element, i) => {
       return(
-        i === index? !element : element 
+        i === index? !element : false 
       )
     })
     SetModifiedArticle(articles[index])
